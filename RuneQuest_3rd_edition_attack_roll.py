@@ -6,7 +6,6 @@ in RuneQuest 3rd edition
 """
 
 # This programs creates die class to emulate die rolls
-
 # import random to simulate die cast
 
 from random import randint
@@ -44,7 +43,7 @@ def main():
     roll = casting.die_roll()
     print roll
    
-
+# This monstrosity really needs some work...
     skill_list = {
             xrange(1, 8) : {1 : "Critical", 96 : "Fumble", 97 : "Fumble", 98 : "Fumble", 99 : "Fumble", 100 : "Fumble"},
             xrange(8, 11) : {1 : "Critical", 2 : "Exceptional", 96 : "Fumble", 97 : "Fumble", 98 : "Fumble", 99 : "Fumble", 100 : "Fumble"},                          
@@ -88,15 +87,7 @@ def main():
     except(KeyError):
         pass
     
-    
-
-             # if skill_lvl not in key:
-        #    print "miss"
-         #   break
-       # elif skill_lvl in key:
-        #    print skill_list[key][roll]
-         #   break
-        
+       
             
 
 count = 100
