@@ -76,19 +76,24 @@ def main():
 
                 }
 
-
-
-# Need to still workout what happens if value not in dictionary
+# determines if the hit is successful or not and critical/exceptional/fumble
     try:
+        for key in skill_list:
+            if skill_lvl not in key and roll > skill_lvl:
+                print "Hit missed"
+                break
+            elif skill_lvl not in key and roll <= skill_lvl:
+                print "Hit"
+                break   
+        
         for key in skill_list:
             if skill_lvl in key:
                 print skill_list[key][roll]        
                 break
+      
     except(KeyError):
         pass
-    
-       
-            
+
 
 count = 100
 while count > 0:
